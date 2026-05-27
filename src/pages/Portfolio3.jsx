@@ -340,8 +340,8 @@ export default function Portfolio3() {
         }
 
         .photo-ring {
-          width: 400px;
-          height: 400px;
+          width: min(400px, 85vw);
+          height: min(400px, 85vw);
           border-radius: 50%;
           padding: 3px;
           background: linear-gradient(135deg, #7c6aff, #c084fc, #e879a0);
@@ -476,7 +476,7 @@ export default function Portfolio3() {
         <div className="blob" style={{ width: 400, height: 400, background: "#f0abfc", bottom: -80, left: -80 }} />
 
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", width: "100%" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 80, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 80, flexWrap: "wrap", justifyContent: "space-between" }}>
             {/* Text */}
             <div style={{ flex: 1, minWidth: 280 }}>
               <div style={{
@@ -591,7 +591,7 @@ export default function Portfolio3() {
             </h2>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }}>
+          <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center", }}>
             <div id="anim-about2" data-animate className={anim("anim-about2")} style={{ transition: "all 0.7s 0.1s" }}>
               <p style={{ fontSize: 16, color: "#6b6580", lineHeight: 1.9, marginBottom: 20 }}>
                 Développeuse web passionnée par la création d’interfaces modernes, responsives et orientées utilisateur.
@@ -811,7 +811,7 @@ export default function Portfolio3() {
             </h2>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(460px, 1fr))", gap: 28 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 28 }}>
             {projets.map((p, i) => (
               <div
                 key={i}
@@ -850,20 +850,11 @@ export default function Portfolio3() {
                     position: "absolute", inset: 0,
                     background: "linear-gradient(to top, rgba(26,22,40,0.5), transparent)",
                   }} />
-                  {p.featured && (
-                    <div style={{
-                      position: "absolute", top: 14, left: 14,
-                      background: "linear-gradient(135deg, #7c6aff, #c084fc)",
-                      color: "white", padding: "4px 12px", borderRadius: 50,
-                      fontSize: 11, fontWeight: 700,
-                    }}>
-                      ✦ Projet phare
-                    </div>
-                  )}
+                  
                   <div style={{
                     position: "absolute", top: 14, right: 14,
                     background: p.status === "Terminé" ? "#f0fdf4" : "#fff7ed",
-                    color: p.status === "Terminé" ? "#16a34a" : "#ea580c",
+                    color: p.status === "g" ? "#16a34a" : "#ea580c",
                     border: `1px solid ${p.status === "Terminé" ? "#bbf7d0" : "#fed7aa"}`,
                     padding: "3px 10px", borderRadius: 50, fontSize: 11, fontWeight: 700,
                   }}>
@@ -920,7 +911,15 @@ export default function Portfolio3() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 28, alignItems: "start" }}>
+          <div
+            className="contact-grid"
+            style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1.4fr",
+                gap: 28,
+                alignItems: "start",
+            }}
+          >
             <div className="card" style={{ padding: 32 }}>
               <h3 style={{ fontSize: 17, fontWeight: 700, color: "#1a1628", marginBottom: 24 }}>Me contacter</h3>
               {[
@@ -1084,6 +1083,51 @@ export default function Portfolio3() {
           .hidden.md\\:flex { display: none !important; }
           .hidden.md\\:block { display: none !important; }
           .md\\:hidden { display: block !important; }
+          /* ABOUT */
+        .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 36px !important;
+        }
+
+        /* CONTACT */
+        .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        }
+
+        /* ABOUT + CONTACT cards */
+        .about-grid .card,
+        .contact-grid .card {
+        padding: 22px !important;
+        }
+
+        /* ABOUT text */
+        .about-grid p {
+        font-size: 15px !important;
+        line-height: 1.9 !important;
+        }
+
+        /* CONTACT form */
+        .contact-grid form {
+        width: 100%;
+        }
+
+        /* CONTACT inputs */
+        .contact-grid input,
+        .contact-grid textarea {
+        font-size: 16px !important;
+        }
+
+        /* CONTACT buttons */
+        .contact-grid .btn-primary {
+        width: 100%;
+        }
+
+        /* FIX overflow mobile */
+        .about-grid,
+        .contact-grid {
+        overflow: hidden;
+        }
         }
         @media (min-width: 769px) {
           .md\\:hidden { display: none !important; }
