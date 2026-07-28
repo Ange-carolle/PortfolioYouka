@@ -11,6 +11,7 @@ import HealthLinkAdmin from "../assets/images/HealthLinkAdmin.png";
 import MboaBusAdmin from "../assets/images/MboaBusAdmin.png";
 import G2BIsarl from "../assets/images/G2BIsarl.png";
 import MboaBus from "../assets/images/MboaBus.png";
+import ChristianBusiness from "../assets/images/Christian.png";
 
 // ─────────────────────────────────────────────────────────────────
 // Constante : met ton import ici quand tu auras la photo
@@ -139,6 +140,16 @@ export default function Portfolio3() {
       image: HealthLinkAdmin,
       status: "Terminé",
       featured: true,
+      lien: "#",
+    },
+    {
+      titre: "Christian's business line",
+      desc: "Gestion des dossiers médicaux, rendez-vous et suivi patient. Interface moderne et sécurisée pour professionnels de santé.",
+      techs: ["React.js",  "Tailwind CSS"],
+      image: ChristianBusiness,
+      status: "Terminé",
+      featured: true,
+      lien: "https://christian-s-business.vercel.app/",
     },
     {
       titre: "MboaBus Admin Dashboard",
@@ -147,6 +158,7 @@ export default function Portfolio3() {
       image: MboaBusAdmin,
       status: "En cours",
       featured: true,
+      lien: "#",
     },
     {
       titre: "G2BI SARL",
@@ -155,6 +167,7 @@ export default function Portfolio3() {
       image: G2BIsarl,
       status: "Terminé",
       featured: false,
+      lien: "https://g2-bi-sarl-4f16.vercel.app/",
     },
     {
       titre: "MboaBus App",
@@ -163,6 +176,7 @@ export default function Portfolio3() {
       image: MboaBus,
       status: "Terminé",
       featured: false,
+      lien: "#",
     },
   ];
 
@@ -876,7 +890,7 @@ export default function Portfolio3() {
                     ))}
                   </div>
                   <div style={{ display: "flex", gap: 20 }}>
-                    <a href="#" style={{
+                    <a href={p.lien} style={{
                       display: "inline-flex", alignItems: "center", gap: 6,
                       fontSize: 13, fontWeight: 700, color: "#7c6aff", textDecoration: "none",
                     }}>
