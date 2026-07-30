@@ -12,6 +12,7 @@ import MboaBusAdmin from "../assets/images/MboaBusAdmin.png";
 import G2BIsarl from "../assets/images/G2BIsarl.png";
 import MboaBus from "../assets/images/MboaBus.png";
 import ChristianBusiness from "../assets/images/Christian.png";
+import Expenses from "../assets/images/Expenses.png";
 
 // ─────────────────────────────────────────────────────────────────
 // Constante : met ton import ici quand tu auras la photo
@@ -177,6 +178,15 @@ export default function Portfolio3() {
       status: "Terminé",
       featured: false,
       lien: "#",
+    },
+    {
+      titre: "Expenses Tracker App",
+      desc: "Application web de suivi des dépenses.",
+      techs: ["React Native", "django", "Tailwind CSS"],
+      image: Expenses,
+      status: "Terminé",
+      featured: false,
+      lien: "https://front-d-penses.vercel.app/",
     },
   ];
 
