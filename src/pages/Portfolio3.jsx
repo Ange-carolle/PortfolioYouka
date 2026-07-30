@@ -500,7 +500,7 @@ export default function Portfolio3() {
               }}>
                 <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#7c6aff", display: "inline-block" }} />
                 <span style={{ fontSize: 12, fontWeight: 600, color: "#7c6aff", letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                  Développeuse Web Junior | React & Odoo ERP
+                  Développeuse Web | React & Odoo ERP
                 </span>
               </div>
 
