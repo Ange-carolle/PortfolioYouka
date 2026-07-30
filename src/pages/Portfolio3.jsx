@@ -182,7 +182,7 @@ export default function Portfolio3() {
     {
       titre: "Expenses Tracker App",
       desc: "Application web de suivi des dépenses.",
-      techs: ["React Native", "django", "Tailwind CSS"],
+      techs: ["React js", "django", "Tailwind CSS"],
       image: Expenses,
       status: "Terminé",
       featured: false,
