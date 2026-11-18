@@ -548,7 +548,7 @@ export default function Portfolio3() {
                   <Linkedin size={20} />
                 </a>
                 <a
-                  href="https://github.com/Ange-carolle"
+                  href="https://github.com/Ange-carolle?tab=repositories"
                   style={{ color: "#a09ab8", transition: "color 0.2s" }}
                   onMouseEnter={(e) => (e.target.style.color = "#7c6aff")}
                   onMouseLeave={(e) => (e.target.style.color = "#a09ab8")}
