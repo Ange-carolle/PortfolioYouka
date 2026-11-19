@@ -973,7 +973,7 @@ export default function Portfolio3() {
                 <div style={{ display: "flex", gap: 12 }}>
                   {[
                     { href: "https://www.linkedin.com/in/ange-carolle-youka-djomgoue-30b325266", icon: Linkedin },
-                    { href: "https://github.com/Ange-carolle", icon: Github },
+                    { href: "https://github.com/Ange-carolle?tab=repositories", icon: Github },
                   ].map((s) => (
                     <a key={s.href} href={s.href} style={{
                       width: 38, height: 38, borderRadius: 10, background: "#f5f3ff",
@@ -984,6 +984,7 @@ export default function Portfolio3() {
                     </a>
                   ))}
                 </div>
+                
               </div>
             </div>
 
